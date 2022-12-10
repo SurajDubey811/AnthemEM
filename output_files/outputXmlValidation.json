@@ -1,0 +1,9 @@
+{
+  "preAuth": true,
+  "autoAdjudicatedInd": true,
+  "visibility": true,
+  "keywords": true,
+  "xlCalSITMatch": true,
+  "specialtyCode": true,
+  "diagnosisCode": true
+}

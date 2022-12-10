@@ -1,0 +1,34 @@
+{
+  "preAuth": {
+    "xpath": ".//namespace:preAuth",
+    "expected_value": "false",
+    "pipeline_stage": "normalization"
+  },
+  "autoAdjudicatedInd": {
+    "xpath": ".//namespace:autoAdjudicatedInd",
+    "expected_value": "true",
+    "pipeline_stage": "normalization"
+  },
+  "visibility": {
+    "xpath": ".//namespace:visibility",
+    "expected_value": "",
+    "pipeline_stage": "normalization"
+  },
+  "keywords": {
+    "xpath": ".//namespace:keywords",
+    "expected_value": "",
+    "pipeline_stage": "normalization"
+  },
+  "specialtyCode": {
+    "xpath": "/namespace:situationDefinition/namespace:specialtyCode",
+    "prop": [ "id", "desc"],
+    "xl_col": ["SPEC","SPEC_DESC"],
+    "expected_value": ["ALL","ALL"],
+    "pipeline_stage": "duplicate_identification"
+  },
+  "diagnosisCode": {
+    "xpath": "/namespace:situationDefinition/namespace:diagnosisCodes/namespace:diagnosisCode",
+    "expected_value": "same",
+    "pipeline_stage": "duplicate_identification"
+  }
+}

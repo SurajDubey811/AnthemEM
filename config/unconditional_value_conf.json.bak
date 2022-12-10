@@ -1,0 +1,27 @@
+{
+  "preAuth": {
+    "xpath": ".//namespace:preAuth",
+    "expected_value": "false"
+  },
+  "autoAdjudicatedInd": {
+    "xpath": ".//namespace:autoAdjudicatedInd",
+    "expected_value": "true"
+  },
+  "visibility": {
+    "xpath": ".//namespace:visibility",
+    "expected_value": ""
+  },
+  "keywords": {
+    "xpath": ".//namespace:keywords",
+    "expected_value": ""
+  },
+  "specialtyCode": {
+    "xpath": ".//namespace:situationDefinition/namespace:specialtyCode",
+    "prop": "id",
+    "expected_value": "ALL"
+  },
+  "diagnosisCode": {
+    "xpath": ".//namespace:situationDefinition/namespace:diagnosisCodes/namespace:diagnosisCode",
+    "expected_value": "same"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "hashCols": [
+    "PATH_BEN_COMP_NAME",
+    "BEN_COMP_LVL",
+    "SIT_GRP_ID",
+    "COIN",
+    "COIN_VAL",
+    "COIN_PERIOD",
+    "COIN_EOB",
+    "COIN_ACCUM",
+    "COIN_ACCUM_NET",
+    "COPAY",
+    "COPAY_VAL",
+    "COPAY_PERIOD",
+    "COPAY_EOB",
+    "COPAY_ACCUM",
+    "COPAY_ACCUM_NET",
+    "COPAY_MAX",
+    "COPAY_MAX_VAL",
+    "COPAY_MAX_PERIOD",
+    "COPAY_MAX_EOB",
+    "COPAY_MAX_ACCUM",
+    "COPAY_MAX_ACCUM_NET",
+    "DED",
+    "DED_VAL",
+    "DED_PERIOD",
+    "DED_EOB",
+    "DED_ACCUM",
+    "DED_ACCUM_NET",
+    "DED_AGG",
+    "DED_AGG_VAL",
+    "DED_AGG_PERIOD",
+    "DED_AGG_EOB",
+    "DED_AGG_ACCUM",
+    "DED_AGG_ACCUM_NET",
+    "DOL_LMT",
+    "DOL_LMT_VAL",
+    "DOL_LMT_PERIOD",
+    "DOL_LMT_EOB",
+    "DOL_LMT_ACCUM",
+    "DOL_LMT_ACCUM_NET",
+    "PENALTY",
+    "PENALTY_VAL",
+    "PENALTY_PERIOD",
+    "PENALTY_EOB",
+    "PENALTY_ACCUM",
+    "PENALTY_ACCUM_NET",
+    "SVC_DED",
+    "SVC_DED_VAL",
+    "SVC_DED_PERIOD",
+    "SVC_DED_EOB",
+    "SVC_DED_ACCUM",
+    "SVC_DED_ACCUM_NET",
+    "UNIT",
+    "UNIT_VAL",
+    "UNIT_PERIOD",
+    "UNIT_EOB",
+    "UNIT_ACCUM",
+    "UNIT_ACCUM_NET"
+  ],
+  "sibling_dup_indentify_req_cols": [
+    "DX",
+    "POS",
+    "SPEC",
+    "CAL_SIT_CHANGED",
+    "CAL_SIT_COMMENTS",
+    "SIT_TYPE_DESC"
+  ],
+  "sibling_dup_indentify_on_cols": [
+    "PATH_BEN_COMP_NAME",
+    "BEN_COMP_LVL",
+    "SIT_GRP_ID"
+  ],
+  "sibling_dup_identified_in_app_col":"CAL_SIT_CHANGED",
+  "prop_priority_rule": {
+    "DX": {
+      "ALL": 1,
+      "": 1
+    },
+    "POS": {
+      "": 1,
+      "ALL": 1
+    },
+    "SPEC": {
+      "ALL": 1,
+      "PCP": 2,
+      "SPC": 3,
+      "PCPNLHO": 2,
+      "SPCNLHO": 3
+    }
+  },
+  "output_report": "output_files/sibling_level_duplicate_identification.xlsx"
+}
