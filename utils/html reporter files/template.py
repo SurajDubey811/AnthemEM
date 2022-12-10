@@ -925,10 +925,10 @@ def html_template():
             <table class="table row-border tablecard" id="tm">
                 <thead>
                     <tr>
-                        <th>Suite</th>
-                        <th>Test Case</th>
                         <th>Test ID</th>
+                        <th>Test Case</th>
                         <th>Test Description</th>
+                        <th>Suite</th>
                         <th>Status</th>
                         <th>Duration (s)</th>
                         <th>Error Message</th>
