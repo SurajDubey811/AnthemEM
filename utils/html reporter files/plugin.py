@@ -388,10 +388,10 @@ class HTMLReporter(object):
 
         test_row_text = """
             <tr>
-                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">__sname__</td>
-                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">__name__</td>
-                <td>__testid__</td>
-                <td>__testdesc__</td>
+                <td style="word-wrap: break-word;max-width: 100px; white-space: normal; text-align:left">__testid__</td>
+                <td style="word-wrap: break-word;max-width: 170px; white-space: normal; text-align:left">__name__</td>
+                <td style="word-wrap: break-word;max-width: 250px; white-space: normal; text-align:left">__testdesc__</td>
+                <td style="word-wrap: break-word;max-width: 150px; white-space: normal; text-align:left">__sname__</td>
                 <td>__stat__</td>
                 <td>__dur__</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
@@ -426,10 +426,10 @@ class HTMLReporter(object):
                 if ((_test_status == 'FAIL') or (_test_status == 'ERROR')) and (
                         screen_base != ''): self.generate_screenshot_data()
 
-                test_row_text = test_row_text.replace("__sname__", str(_suite_name))
-                test_row_text = test_row_text.replace("__name__", str(_test_name))
                 test_row_text = test_row_text.replace("__testid__", _test_id)
+                test_row_text = test_row_text.replace("__name__", str(_test_name))
                 test_row_text = test_row_text.replace("__testdesc__", _test_desc)
+                test_row_text = test_row_text.replace("__sname__", str(_suite_name))
                 test_row_text = test_row_text.replace("__stat__", str(_test_status))
                 test_row_text = test_row_text.replace("__dur__", str(round(_duration, 2)))
                 test_row_text = test_row_text.replace("__msg__", str(_current_error[:50]))
@@ -446,10 +446,10 @@ class HTMLReporter(object):
                 _pvalue = 0
             elif (self.rerun is not None) and (
                     (_test_status == 'xFAIL') or (_test_status == 'xPASS') or (_test_status == 'SKIP')):
-                test_row_text = test_row_text.replace("__sname__", str(_suite_name))
+                test_row_text = test_row_text.replace("__testid__", _test_id)
                 test_row_text = test_row_text.replace("__name__", str(_test_name))
-                test_row_text = test_row_text.replace("__testid__", str(_test_id))
-                test_row_text = test_row_text.replace("__testdesc__", str(_test_desc))
+                test_row_text = test_row_text.replace("__testdesc__", _test_desc)
+                test_row_text = test_row_text.replace("__sname__", str(_suite_name))
                 test_row_text = test_row_text.replace("__stat__", str(_test_status))
                 test_row_text = test_row_text.replace("__dur__", str(round(_duration, 2)))
                 test_row_text = test_row_text.replace("__msg__", str(_current_error[:50]))
@@ -467,10 +467,10 @@ class HTMLReporter(object):
             if ((_test_status == 'FAIL') or (_test_status == 'ERROR')) and (
                     screen_base != ''): self.generate_screenshot_data()
 
-            test_row_text = test_row_text.replace("__sname__", str(_suite_name))
+            test_row_text = test_row_text.replace("__testid__", _test_id)
             test_row_text = test_row_text.replace("__name__", str(_test_name))
-            test_row_text = test_row_text.replace("__testid__", str(_test_id))
-            test_row_text = test_row_text.replace("__testdesc__", str(_test_desc))
+            test_row_text = test_row_text.replace("__testdesc__", _test_desc)
+            test_row_text = test_row_text.replace("__sname__", str(_suite_name))
             test_row_text = test_row_text.replace("__stat__", str(_test_status))
             test_row_text = test_row_text.replace("__dur__", str(round(_duration, 2)))
             test_row_text = test_row_text.replace("__msg__", str(_current_error[:50]))
